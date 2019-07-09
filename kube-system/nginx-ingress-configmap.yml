@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-k8s-dashboard
+  namespace: kube-system
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: e4kube1dash01.datalinklabs.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: e4kube1dash01
+          servicePort: 80
