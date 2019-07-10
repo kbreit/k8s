@@ -1,7 +1,4 @@
-args:
-  - --config=metallb-config
 configInline:
-  Example ARP Configuration
   address-pools:
   - name: default
     protocol: layer2
